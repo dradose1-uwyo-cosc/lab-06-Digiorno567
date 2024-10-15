@@ -70,7 +70,13 @@ print(len(random_string)) # Print out the size for reference
 # Output which letter occurred the most 
 # Output which letter occurred the least 
 # Output what the percentage of the string each character is, again in alphabetical
-
+characterCount={}
+for character in random_string:
+    if character in characterCount:
+        characterCount[character]+=1
+    else:
+        characterCount[character]=1
+print(characterCount)
 #Tips and trick:
 # You can iterate through strings like you would a list
 # All characters are lowercase 
